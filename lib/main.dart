@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         useMaterial3: true,
         fontFamily: "VT323",
-        textTheme: GoogleFonts.vt323TextTheme(Theme.of(context).textTheme.copyWith()),
+        textTheme: GoogleFonts.vt323TextTheme(
+          Theme.of(context).textTheme.copyWith(),
+        ),
       ),
       showSemanticsDebugger: false,
       home: const MyHomePage(title: 'AI detection prototype'),
