@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         useMaterial3: true,
-        fontFamily: "VT323",
         textTheme: GoogleFonts.vt323TextTheme(
           Theme.of(context).textTheme.copyWith(),
         ),
