@@ -11,7 +11,6 @@ import 'package:google_fonts/google_fonts.dart';
 ///      "Hello World",
 ///       style: fontWrapper(context, TextStyle(fontSize: 24))
 ///   );
-/// ```
 
 fontWrapper(BuildContext context, TextStyle style) {
   return GoogleFonts.vt323().merge(style);

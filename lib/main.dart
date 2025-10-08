@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         useMaterial3: true,
         fontFamily: "VT323",
-        textTheme: GoogleFonts.vt323TextTheme(),
+        textTheme: GoogleFonts.vt323TextTheme(Theme.of(context).textTheme.copyWith()),
       ),
-      themeMode: ThemeMode.dark,
       showSemanticsDebugger: false,
       home: const MyHomePage(title: 'AI detection prototype'),
     );
@@ -49,7 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("this is a test ")],
+          children: [
+            Text("this is a test ", style: TextStyle(color: Colors.white)),
+          ],
         ),
       ),
     );
