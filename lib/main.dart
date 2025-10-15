@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:ai_detection_app/app/camera/view/camera_page.dart';
+import 'package:ai_detection_app/theme/font_wrapper.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +10,7 @@ late List<CameraDescription> cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   cameras = await availableCameras();
   runApp(const MyApp());
 }
@@ -26,9 +30,16 @@ class MyApp extends StatelessWidget {
         ),
       ),
       showSemanticsDebugger: false,
-      home: Scaffold(
-        appBar: AppBar(title: Text('AI detection prototype')),
-        body: CameraPage(),
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              'AI detection App',
+              style: fontWrapper(context, TextStyle()),
+            ),
+          ),
+          body: CameraPage(),
+        ),
       ),
     );
   }

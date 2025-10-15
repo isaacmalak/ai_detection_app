@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// A wrapper function is used for changing the font style easily in the future
-/// for example if we want to change the font from VT323 to another font
-/// we just need to change it here not in the whole app
+/// ## A wrapper function is used for changing the font style easily in the future
+/// ### for example if we want to change the font from VT323 to another font or just editing some properties
+/// ### we just need to change it here not in the whole app
 ///
 /// Usage:
 /// ```dart
@@ -11,7 +11,12 @@ import 'package:google_fonts/google_fonts.dart';
 ///      "Hello World",
 ///       style: fontWrapper(context, TextStyle(fontSize: 24))
 ///   );
+/// ```
 
-fontWrapper(BuildContext context, TextStyle style) {
+TextStyle fontWrapper(BuildContext context, TextStyle style) {
   return GoogleFonts.vt323().merge(style);
 }
+
+
+
+
